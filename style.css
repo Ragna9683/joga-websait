@@ -1,0 +1,177 @@
+footer {
+  
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* контент сверху, автор снизу */
+  min-height: 1100px; /* если нужна минимальная высота */
+  padding-top: 130px;
+}
+
+.footer-content {
+  
+  display: flex;
+  justify-content: space-between; /* слева блок с поэзией, справа фотки */
+  align-items:flex-start;
+  width: 100%;
+  max-width: 1237px;
+  margin: 0 auto;
+  gap: 100px;
+  height:785px ;
+ 
+}
+
+.poetry-block {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items:flex-start ;
+  margin-top: -1px;
+  width: 592px;
+  height: 785px;
+}
+
+.poetry-block h2 {
+  font-family: Bodoni;
+  color: #0F3228;
+  font-size: 72px;
+  margin: 0;
+  font-weight: 600;
+}
+
+
+.poetry-table  {
+  width: 592px;
+  height: 480px;
+ margin-bottom: 40px;
+
+ 
+}
+
+.obama {
+  font-size: 24px;
+  font-family: Montserrat;
+}
+h5{
+  font-weight: normal;
+  font-size: 24px;
+  font-family: Montserrat;
+}
+.poetry-slider {
+  justify-content: flex-start;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 204px;
+}
+
+.arrow-btn {
+  display: flex;
+   align-items: center;
+   justify-content: center;
+  border-radius: 50px;
+  border: 1.5px solid rgba(176, 184, 182);
+  background: rgba(15, 88, 68);
+  color: rgba(148, 202, 195);
+  cursor: pointer;
+  width: 145px;
+  height: 55px;
+   transition: background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+  
+}
+
+ svg{
+  color: #D2FFFD;
+  transition: background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+ svg:hover{
+color:#0F3228
+ }
+
+
+.arrow-btn:hover {
+ background-color: #D2FFFD;
+  color: #0F5844;
+  border-color: #0F5844;
+}
+
+.footer-photos {
+  position: relative;
+  width: 400px;
+  height: auto;
+  align-self: flex-start;
+
+}
+
+.footer-photo {
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.photo-main {
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 500px;
+  height: 580px;
+}
+
+.photo-frame {
+  top: -15px;
+  right: -45px;
+  z-index: 1;
+  height: 610px;
+  width: 520px;
+}
+
+.author {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  align-items: center;
+  background-color: #0F3228;
+  padding: 30px;
+  height: 150px;
+}
+
+
+.name p {
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
+  color: #D2FFFD;
+  white-space: nowrap;
+}
+
+.logo, .logo2 {
+  display: flex;
+  align-items: center;
+  
+  cursor: pointer;
+   gap:20px;
+}
+
+.logo img, .logo2 img {
+  width: 50px;
+  height:50px;
+  
+}
+
+.label {
+  color: #D2FFFD;
+  font-size: 24px;
+  transition: font-size 0.6s ease;
+ 
+}
+
+.logo:hover .label,
+.logo2:hover .label {
+  font-size: 30px;
+}
