@@ -1,47 +1,41 @@
-
+/* Загальні стилі */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-  body {
-    font-family: "Montserrat", sans-serif;
-    background: #000;
-    
-  }
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #000;
+}
 
+/* Рамка-екран */
 .page-frame {
-
   top: 0;
   left: 0;
-  width: 100vw;             /* ширина на весь экран */
-  height: 100vh;            /* высота на весь экран */
-  border: 15px solid black; /* рамка как у телевизора */
-  box-sizing: border-box;   /* учитываем рамку в размерах */
-  background-color:black;         /* цвет рамки/фона */
+  width: 100vw;
+  height: 100vh;
+  border: 15px solid black;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .page-content {
-
-  transform: scale(0.9);        /* уменьшаем весь контент до 80% */
-  transform-origin:  center; /* центрируем сверху по центру */
-  width: 100%;                  /* растягиваем на ширину рамки */
-  height: 100%;                 /* растягиваем на высоту рамки */
-  overflow-y: auto;             /* можно оставить скролл внутри */
-
-       /* фон внутри "телека" */
-  box-sizing: border-box;
- overflow-y: scroll;       /* скролл есть, но можно скрыть */
-  scrollbar-width: none;    /* для Firefox */
-  -ms-overflow-style: none;
+  transform: scale(0.9);
+  transform-origin: center;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
   scroll-behavior: smooth;
-  
 }
 
 
+/* Основний контент */
 .page-wrapper {
   width: 1400px;
   margin: 0 auto;
@@ -52,17 +46,12 @@
   min-height: 100vh;
 }
 
-
-
-
+/* Header */
 header {
-  top: 0;
-    left: 0;
   position: relative;
   width: 1400px;
   height: 955px;
   overflow: hidden;
-
 }
 
 .header-bg {
@@ -72,6 +61,7 @@ header {
   object-fit: cover;
 }
 
+/* Навігація */
 .nav-container {
   position: absolute;
   top: 10px;
@@ -89,40 +79,35 @@ header {
 }
 
 .nav-menu li {
-
   height: 49px;
   display: flex;
   justify-content: center;
   align-items: center;
-  
   border-right: 1px solid white;
   background: transparent;
 }
-
-
 
 .nav-menu li:last-child {
   border-right: none;
 }
 
 .nav-menu li a {
-  font-weight:100;
+  font-weight: 100;
   font-size: 24px;
-  line-height: 100%;
-  transition: transform 0.4s ease;
   color: #D2FFFD;
   text-decoration: none;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
+  transition: transform 0.4s ease;
 }
 
 .nav-menu li a:hover {
   transform: scale(1.3);
 }
 
+/* Головна секція */
 main {
   width: 100%;
   height: 1024px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,7 +121,7 @@ main {
   gap: 77px;
 }
 
-
+/* Фото */
 .photos-container {
   position: relative;
   width: 545px;
@@ -145,13 +130,10 @@ main {
 
 .photo {
   position: absolute;
-  width: 100%;
-  height: auto;
   border-radius: 4px;
 }
 
 .photo-1 {
-
   width: 520px;
   height: 780px;
   top: 0;
@@ -165,26 +147,22 @@ main {
   top: 50px;
   left: 50px;
   z-index: 2;
-  margin-top:-35px ;
-  margin-left: -10px; 
-  border: solid 3px #D2FFFD;
+  border: 3px solid #D2FFFD;
 }
 
-
+/* Текст */
 .text-container {
   max-width: 600px;
-  margin: 0 auto;
   padding: 20px;
 }
 
 .title-box h1 {
-  margin-right: 30px;
   font-size: 72px;
   font-weight: 500;
-  margin: 0 0 30px 0;
   font-family: "Bodoni", serif;
   text-align: end;
   color: #000;
+  margin-bottom: 30px;
 }
 
 .paragraph-box {
@@ -195,19 +173,13 @@ main {
 
 .paragraph-box p {
   font-size: 22px;
-  line-height: 100%;
-  text-align: left;
-  margin: 0;
-  color: #000;
-  text-align: right;
-  color: #0F3228;
   line-height: 1.3;
-  word-spacing: -1px
+  color: #0F3228;
+  text-align: right;
+  word-spacing: -1px;
 }
 
-
-
-
+/* Hero секція */
 .hero-section {
   position: relative;
   width: 1400px;
@@ -220,7 +192,7 @@ main {
   object-fit: cover;
 }
 
-/* верхний и нижний оверлеи */
+/* Оверлеї */
 .overlay-top,
 .overlay-bottom {
   position: absolute;
@@ -228,11 +200,6 @@ main {
   width: 100%;
   z-index: 2;
   display: flex;
-  color: #D2FFFD;
-  padding: 0;
-  /* убрал лишние паддинги */
-  height: auto;
-  /* больше не фиксированная высота */
 }
 
 .overlay-top {
@@ -245,20 +212,10 @@ main {
   bottom: 0;
   justify-content: center;
   align-items: center;
+  background-color: rgba(50, 40, 217, 0.06);
 }
 
-/* картинки внутри верхнего и нижнего оверлеев */
-.overlay-top img,
-.overlay-bottom img {
-  width: 100%;
-  /* на всю ширину контейнера */
-  height: auto;
-  /* сохраняют пропорции */
-  display: block;
-  /* убирает "дырку" снизу */
-}
-
-/* центр с кнопкой */
+/* Центрована кнопка */
 .overlay-center {
   position: absolute;
   top: 0;
@@ -271,7 +228,6 @@ main {
   z-index: 3;
 }
 
-/* кнопка */
 .cta-btn {
   padding: 25px 30px;
   font-size: 22px;
@@ -282,111 +238,175 @@ main {
   cursor: pointer;
   width: 386px;
   height: 98px;
-
-  transition: background-color 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease,
-    transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .cta-btn:hover {
   background-color: #D2FFFD;
   color: #0F5844;
   border-color: #0F5844;
- 
- 
 }
 
-
-article{
-   width: 100%;
-  box-sizing: border-box;
-  display: flex;
-  min-width: 1400px;
-  height: 1024px;
-  border: solid 1px red;
-  align-items: center;
-}
-
-.cases {
-  display: flex;
-height: 934px;
-  border: solid 2px rgb(0, 0, 0);
+/* Bottom Rate */
+.bottom-rate {
+  position: relative;
   width: 1400px;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  gap: 100px;
+  overflow: hidden;
 }
 
-.incases{
-   display: flex;
-height: 851px;
-  border: solid 2px rgb(241, 23, 176);
+.bottom-rate::before {
+  content: "";
+  position: absolute;
+  top: 20px;
   width: 1400px;
-  align-items: center;
+  height: 350px;
+  background: linear-gradient(rgba(15,50,40,0.8), rgba(15,50,40,0.8)), url("assets/images/bgds2.png");
+  background-size: cover;
+  background-position: bottom;
 }
 
-footer {
-  
+.slider {
+  position: relative;
   width: 100%;
-  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+
+
+
+
+.centerr button {
+  padding: 25px 30px;
+  font-size: 22px;
+  border-radius: 71px;
+  border: 1.5px solid rgba(210, 255, 253, 1);
+  background: rgba(15, 88, 68);
+  color: rgba(148, 202, 195);
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.fix{
+  z-index: 10;
+  position: relative;
+  left: 250px;
+  top: 25px;
+}
+
+.centerr button:hover {
+  background-color: #D2FFFD;
+  color: #0F5844;
+  border-color: #0F5844;
+}
+
+
+.rate-btn-l, .rate-btn-r {
+  z-index: 5;               /* кнопки будуть нижче фото */
+}
+
+
+.rate-img {
+  width: 60px;
+  height: 60px;
+}
+
+.rate-btn-l {
+  position: absolute;
+  left: 80px;
+  bottom: 100px;
+  border-radius: 50px;
+  border: 1px solid rgba(176, 184, 182);
+  background: rgba(15, 88, 68);
+  color: rgba(148, 202, 195);
+  cursor: pointer;
+   transition: background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.rate-btn-r {
+  position: absolute;
+  right: 80px;
+  bottom: 100px;
+  z-index: 11;
+  border-radius: 50px;
+  border: 1px solid rgba(176, 184, 182);
+  background: rgba(15, 88, 68);
+  color: rgba(148, 202, 195);
+  cursor: pointer;
+   transition: background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.rate-btn-l button:hover .btn-change path,
+.rate-btn-r button:hover .btn-change path {
+    stroke: rgba(15, 88, 68);
+}
+
+/* Footer */
+footer {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* контент сверху, автор снизу */
-  min-height: 1100px; /* если нужна минимальная высота */
+  justify-content: space-between;
+  min-height: 1100px;
   padding-top: 130px;
 }
 
 .footer-content {
-  
   display: flex;
-  justify-content: space-between; /* слева блок с поэзией, справа фотки */
-  align-items:flex-start;
-  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
   max-width: 1237px;
   margin: 0 auto;
   gap: 100px;
-  height:785px ;
- 
+  height: 785px;
 }
 
 .poetry-block {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  align-items:flex-start ;
-  margin-top: -1px;
   width: 592px;
-  height: 785px;
 }
 
 .poetry-block h2 {
-  font-family: Bodoni;
-  color: #0F3228;
+  font-family: Bodoni, serif;
   font-size: 72px;
-  margin: 0;
+  color: #0F3228;
   font-weight: 600;
 }
 
-
-.poetry-table  {
+.poetry-table {
   width: 592px;
   height: 480px;
- margin-bottom: 40px;
-
- 
+  margin-bottom: 40px;
 }
 
-.obama {
+.obama, h5 {
+  font-family: Montserrat, sans-serif;
   font-size: 24px;
-  font-family: Montserrat;
 }
-h5{
-  font-weight: normal;
-  font-size: 24px;
-  font-family: Montserrat;
-}
+
 .poetry-slider {
-  justify-content: flex-start;
-  width: 100%;
   display: flex;
   align-items: flex-end;
   gap: 204px;
@@ -394,107 +414,97 @@ h5{
 
 .arrow-btn {
   display: flex;
-   align-items: center;
-   justify-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 145px;
+  height: 55px;
   border-radius: 50px;
   border: 1.5px solid rgba(176, 184, 182);
   background: rgba(15, 88, 68);
   color: rgba(148, 202, 195);
   cursor: pointer;
-  width: 145px;
-  height: 55px;
-   transition: background-color 0.3s ease,
+  transition: background-color 0.3s ease,
     color 0.3s ease,
     border-color 0.3s ease,
     transform 0.3s ease;
-  
 }
 
- svg{
-  color: #D2FFFD;
-  transition: background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
-}
- svg:hover{
-color:#0F3228
- }
-
-
-.arrow-btn:hover {
- background-color: #D2FFFD;
+.arrow-btns:hover {
+  background-color: #D2FFFD;
   color: #0F5844;
   border-color: #0F5844;
 }
 
+
+.arrow-btn svg {
+  color: #D2FFFD;
+  transition: all 0.3s ease;
+}
+
+.arrow-btn svg:hover {
+  color: #0F3228;
+}
+
+/* Footer photos */
 .footer-photos {
   position: relative;
   width: 400px;
   height: auto;
-  align-self: flex-start;
-
 }
 
 .footer-photo {
   position: absolute;
-  width: 100%;
-  height: auto;
 }
 
 .photo-main {
   top: 0;
   right: 0;
-  z-index: 2;
   width: 500px;
   height: 580px;
+  z-index: 2;
 }
 
 .photo-frame {
   top: -15px;
   right: -45px;
-  z-index: 1;
-  height: 610px;
   width: 520px;
+  height: 610px;
+  z-index: 1;
 }
 
+/* Автор */
 .author {
   display: flex;
   justify-content: center;
-  gap: 70px;
   align-items: center;
+  gap: 70px;
   background-color: #0F3228;
   padding: 30px;
   height: 150px;
 }
 
-
 .name p {
-  margin: 0;
   font-family: Montserrat, sans-serif;
   font-size: 24px;
   color: #D2FFFD;
-  white-space: nowrap;
 }
 
 .logo, .logo2 {
   display: flex;
   align-items: center;
-  
+  gap: 20px;
   cursor: pointer;
-   gap:20px;
 }
 
 .logo img, .logo2 img {
   width: 50px;
-  height:50px;
-  
+  height: 50px;
 }
 
 .label {
   color: #D2FFFD;
   font-size: 24px;
   transition: font-size 0.6s ease;
- 
 }
 
 .logo:hover .label,
@@ -502,40 +512,21 @@ color:#0F3228
   font-size: 30px;
 }
 
-
-
-
-
+/* Адаптив */
 @media (max-width: 1024px) {
   .nav-menu li {
     width: auto;
     padding: 10px 30px;
-
   }
-
-  .main-content {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
-
-  .photos {
-    position: relative;
+  .photos-container {
     width: 100%;
     height: 400px;
   }
-
   .photo {
     position: relative;
     width: 80%;
     margin: 10px auto;
   }
-
-  .side-box {
-    width: 80%;
-    height: auto;
-  }
-
   .poetry-slider {
     flex-direction: column;
     margin-top: 100px;
@@ -547,14 +538,12 @@ color:#0F3228
     flex-direction: column;
     gap: 15px;
   }
-
   .cta-btn {
     width: 90%;
     height: auto;
     padding: 15px;
     font-size: 18px;
   }
-
   .author {
     flex-direction: column;
     gap: 15px;
@@ -562,7 +551,100 @@ color:#0F3228
   }
 }
 
+article {
+  background-image: url(assets/images/case/cases1\ 1.png);
+  min-width: 1400px;
+  height: 934px;
+
+  display: flex;
+  flex-direction: column;
+  margin-top: 240px;
+ 
+}
+
+.opq {
+  margin-left: 40px;
+margin-top: 40px;
+  min-width: 591px;
+  height: 350px;
+  position: relative;
+ 
+}
+
+.cases {
+  width: 100%;
+  display: flex;
+ 
+}
+
+.incases {
+  min-width: 1400px;
+  height: 518px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+}
+
+.img-block {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 45px;
+  width: 100%;
+  height: 393px;
+  box-sizing: border-box;
+
+}
+
+.circle {
+  display: flex;
+  justify-content: space-between; /* кнопки по краям */
+  align-items: center;
+  width: 100%;
+  background-color: rgb(210, 255, 253, 0.7);
+  height: 82px;
+  position: relative;
+  padding: 0 80px;
+
+}
+
+/* контейнер точек по центру */
+.dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px; /* расстояние между точками */
+  flex: 1;   /* занимает всё пространство между кнопками */
+}
+
+/* сами точки */
+.dot {
+  
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #D2FFFD;
+  transition: background-color 0.3s;
+  border: solid 3px #0F5844;
+  
+}
+
+.dot.active {
+  background-color: #0F5844;
+}
 
 
+.slide-container{
+  height: 137px;
+  width: 602px;
+  background-color: #D2FFFD;
+  border-radius: 20px;
+  font-family: Montserrat;
+  font-size: 24px;
+  padding: 25px;
+}
 
-
+.slide-container a {
+  color: #000;
+}
