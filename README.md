@@ -1,13 +1,21 @@
-# Yoga Website
+# Yoga Instructor Website 🧘‍♀️
 
-Многосекционный сайт для преподавателя йоги (украинский язык).
+A multi-section website built for a yoga instructor (in Ukrainian).
 
-**Что реализовано**
-- Секции: Про мене, Йога, Кейси, Поезія, Контакт, навигация по якорям
-- Слайдер изображений и карусель с точками на чистом JavaScript
-- Стихи подгружаются из Google Таблицы через `fetch` (CSV парсится вручную)
-- Масштабирование страницы под ширину экрана
+### 🌟 Key Features
+* **Multi-section layout:** Includes *About Me*, *Yoga*, *Cases*, *Poetry*, and *Contact* sections with smooth anchor navigation.
+* **Custom JS Components:** Built an image slider and an interactive carousel with navigation dots using vanilla JavaScript.
+* **Dynamic Content (Google Sheets API):** Poetry content is dynamically fetched from a Google Sheet using the `fetch` API and a custom CSV parser.
+* **Responsive Design:** Responsive layout adapted for various screen sizes.
 
-**Стек:** HTML, CSS, JavaScript
+---
 
-Открыть: запустите `index.html` в браузере.
+### 🛠️ Tech Stack
+* **Frontend:** HTML5, CSS3, JavaScript (ES6+)
+* **Data Integration:** Google Sheets API (via Fetch & CSV parsing)
+
+---
+
+### 🚀 Quick Start
+1. Clone or download the repository.
+2. Open `index.html` directly in your browser or view the live demo via GitHub Pages.
